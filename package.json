@@ -121,8 +121,7 @@
         "nsis"
       ],
       "signAndEditExecutable": true,
-      "icon": "build/icon.ico",
-      "signExecutable": false
+      "icon": "build/icon.ico"
     },
     "nsis": {
       "oneClick": false,
