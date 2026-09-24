@@ -1,0 +1,154 @@
+{
+  "name": "edoras",
+  "version": "1.0.0",
+  "description": "A quiet home for your music. A local-first desktop music player.",
+  "private": true,
+  "license": "GPL-2.0-only",
+  "type": "module",
+  "main": "electron/main.js",
+  "author": "Syst4n",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "start": "npm run build && electron .",
+    "test": "node --experimental-strip-types --test tests/*.test.js",
+    "dist": "npm run build && electron-builder --win portable nsis",
+    "demo": "node scripts/generate-demo.js",
+    "test:desktop": "npm run build && node scripts/desktop-smoke.js",
+    "test:playlists": "npm run build && node scripts/playlist-smoke.js",
+    "test:interface": "npm run build && node scripts/interface-smoke.js",
+    "test:identify": "npm run build && node scripts/identify-smoke.js",
+    "test:scale": "npm run build && node scripts/scale-smoke.js",
+    "test:v1": "npm run build && node scripts/v1-smoke.js",
+    "test:details": "npm run build && node scripts/details-smoke.js",
+    "test:final": "npm run build && node scripts/final-smoke.js",
+    "format": "prettier --write src electron scripts tests index.html package.json tsconfig.json README.md"
+  },
+  "build": {
+    "appId": "com.edoras.player",
+    "productName": "Edoras",
+    "directories": {
+      "output": "release"
+    },
+    "compression": "maximum",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json",
+      "THIRD_PARTY_NOTICES.md",
+      "LICENSE",
+      "licenses/**/*",
+      "!**/*.{map,md,markdown,ts,tsx,flow}"
+    ],
+    "extraResources": [
+      {
+        "from": "node_modules/ffmpeg-static/ffmpeg.exe",
+        "to": "ffmpeg.exe"
+      },
+      {
+        "from": "THIRD_PARTY_NOTICES.md",
+        "to": "THIRD_PARTY_NOTICES.md"
+      }
+    ],
+    "fileAssociations": [
+      {
+        "ext": "mp3",
+        "name": "MP3 Audio",
+        "description": "MP3 audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      },
+      {
+        "ext": "flac",
+        "name": "FLAC Audio",
+        "description": "FLAC audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      },
+      {
+        "ext": "m4a",
+        "name": "M4A Audio",
+        "description": "M4A audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      },
+      {
+        "ext": "wav",
+        "name": "WAV Audio",
+        "description": "WAV audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      },
+      {
+        "ext": "ogg",
+        "name": "OGG Audio",
+        "description": "OGG audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      },
+      {
+        "ext": "opus",
+        "name": "Opus Audio",
+        "description": "Opus audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      },
+      {
+        "ext": "aac",
+        "name": "AAC Audio",
+        "description": "AAC audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      },
+      {
+        "ext": "aiff",
+        "name": "AIFF Audio",
+        "description": "AIFF audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      },
+      {
+        "ext": "wma",
+        "name": "WMA Audio",
+        "description": "WMA audio",
+        "role": "Viewer",
+        "icon": "build/icon.ico"
+      }
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "signAndEditExecutable": true,
+      "icon": "build/icon.ico",
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "artifactName": "Edoras-${version}-Windows-Setup.exe"
+    },
+    "portable": {
+      "artifactName": "Edoras-${version}-Windows.exe"
+    }
+  },
+  "devDependencies": {
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "@playwright/test": "^1.63.0",
+    "electron": "^44.4.3",
+    "electron-builder": "^26.15.3",
+    "ffmpeg-static": "^5.3.0",
+    "lucide": "^1.47.0",
+    "prettier": "^3.9.8",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "music-metadata": "^11.15.0",
+    "shazam-api": "0.3.0"
+  }
+}

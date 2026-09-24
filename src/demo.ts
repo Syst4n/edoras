@@ -1,0 +1,28 @@
+import type { Track } from "./types";
+export const demos: Track[] = [
+  ["Golden hour", "Warm keys · Ambient", "golden", 196],
+  ["Blue into blue", "Soft synth · Downtempo", "blue", 220],
+  ["Still, somewhere", "Dreamscape · Instrumental", "green", 174],
+  ["A little closer", "Mellow tones · Electronic", "rose", 261],
+  ["After the rain", "Gentle bells · Ambient", "purple", 146],
+].map(([title, genre, color], i) => ({
+  id: `demo-${i}`,
+  title: String(title),
+  artist: "Edoras Sessions",
+  albumArtist: "Edoras Sessions",
+  album: "First light",
+  duration: 24,
+  number: i + 1,
+  disc: 1,
+  format: "MP3",
+  genre: String(genre),
+  year: 2026,
+  sampleRate: 22050,
+  bitDepth: 0,
+  cover: `/demo/${color}.svg`,
+  favorite: false,
+  addedAt: 0,
+  lyrics: "",
+  url: `/demo/${color}.mp3`,
+  demo: true,
+}));
