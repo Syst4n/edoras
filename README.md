@@ -22,6 +22,17 @@ The installer is for **Windows 10/11, 64-bit x64**. It is unsigned, so Windows m
 <p align="center"><img src="docs/images/playlist.png" alt="A playlist in Edoras" width="880"></p>
 <p align="center"><em>A playlist with custom artwork and playback controls.</em></p>
 
+### Light mode and lyrics
+
+<p align="center"><img src="docs/images/light-player.png" alt="Now Playing in light mode with the listening queue" width="880"></p>
+<p align="center"><em>The full player and listening queue in light mode.</em></p>
+
+<p align="center"><img src="docs/images/light-lyrics.png" alt="Lyrics page in light mode" width="880"></p>
+<p align="center"><em>Artwork and lyrics on their own page.</em></p>
+
+<p align="center"><img src="docs/images/light-player-lyrics.png" alt="Now Playing in light mode with lyrics open" width="880"></p>
+<p align="center"><em>Lyrics beside the full player.</em></p>
+
 ## What Edoras does
 
 - **Keep your music in one place.** Import individual songs or folders, or put files anywhere inside your library folder. Edoras watches the folder for additions and moves. Imports copy outside files; they do not remove the originals.
