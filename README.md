@@ -16,8 +16,11 @@ The installer is for **Windows 10/11, 64-bit x64**. It is unsigned, so Windows m
 
 ## See it
 
+<p align="center"><img src="docs/images/light-home.png" alt="Edoras home page in light mode" width="880"></p>
+<p align="center"><em>Home in light mode, with recently added music and the waveform player.</em></p>
+
 <p align="center"><img src="docs/images/home.png" alt="Edoras home page and player" width="880"></p>
-<p align="center"><em>Home, recent music, albums and the waveform player.</em></p>
+<p align="center"><em>Home in dark mode.</em></p>
 
 <p align="center"><img src="docs/images/playlist.png" alt="A playlist in Edoras" width="880"></p>
 <p align="center"><em>A playlist with custom artwork and playback controls.</em></p>
@@ -33,16 +36,30 @@ The installer is for **Windows 10/11, 64-bit x64**. It is unsigned, so Windows m
 <p align="center"><img src="docs/images/light-player-lyrics.png" alt="Now Playing in light mode with lyrics open" width="880"></p>
 <p align="center"><em>Lyrics beside the full player.</em></p>
 
+### Artists and statistics
+
+<p align="center"><img src="docs/images/light-artists.png" alt="Artists page in light mode with artist photos" width="880"></p>
+<p align="center"><em>Browse artists by the album artist in your music metadata.</em></p>
+
+<p align="center"><img src="docs/images/light-statistics.png" alt="Statistics overview in light mode" width="880"></p>
+<p align="center"><em>Listening time, plays, library size, artists, streaks and playlists.</em></p>
+
+<p align="center"><img src="docs/images/light-statistics-details.png" alt="Top songs, artists and genres in Statistics" width="880"></p>
+<p align="center"><em>Top songs, artists, genres and listening times.</em></p>
+
 ## What Edoras does
 
 - **Keep your music in one place.** Import individual songs or folders, or put files anywhere inside your library folder. Edoras watches the folder for additions and moves. Imports copy outside files; they do not remove the originals.
 - **Play and organize.** Browse songs, albums and artists; search and sort your library; make playlists with custom pictures; mark favorites; use a queue, shuffle and repeat. Play an album, artist or playlist from its page.
+- **Browse artists from metadata.** Edoras groups songs by album artist from their embedded or fetched metadata. Sort your collection by artist, album, release date or title, and add artist photos with an online lookup.
 - **Enjoy the details.** The player shows a whole-track waveform and picks its accent color from the current cover. Light and dark themes are available.
-- **Fill missing information when you ask.** Search for song details and artwork from Deezer, Apple Music and MusicBrainz; find artist photos through Wikimedia; look up lyrics through LRCLIB; or identify a song by sound. These services need an internet connection. Audio identification uses an unofficial service and may stop working if that service changes.
-- **See your listening history.** The Statistics page shows listening time, favorite songs and artists, genres and trends. History stays in your chosen library folder on this computer.
+- **Fetch missing metadata.** Search by song name or use **Fetch Library Metadata** to look up the collection. Matches can add song details, album artwork and artist photos from Deezer, Apple Music, MusicBrainz and Wikimedia. The library-wide fetch only applies confident matches automatically; choose a result yourself when a song needs a closer look.
+- **Identify a song by sound.** Use **Identify by sound** when a filename or tag is not enough. Edoras sends a short acoustic fingerprint, not the audio file, to an unofficial identification service; availability can change.
+- **Find lyrics automatically during a metadata fetch.** Edoras reads embedded lyrics on import. When you choose an online metadata match or run the library-wide fetch, it also looks for lyrics through LRCLIB and saves any match for display on the Lyrics page or inside Now Playing. You can retry the lookup or paste your own words.
+- **See your listening history.** Statistics shows listening time, plays, streaks, top songs, artists and genres, plus trends over time. History stays in your chosen library folder on this computer.
 - **Use your own formats.** MP3, FLAC, WAV, M4A, AAC, OGG, Opus, AIFF, WMA, ALAC, APE, WavPack and audio in MP4/MKA containers can be imported. FFmpeg is bundled for formats Windows cannot play directly. DRM-protected or damaged files may not play.
 
-Edoras has no account, streaming catalog, analytics or music upload. It does not make metadata requests on startup, import or playback. Online lookups begin when you choose them. Embedded tags and your audio files are not rewritten by a metadata lookup.
+Edoras has no account, streaming catalog, analytics or music upload. It does not make online requests on startup, import or playback. Online metadata and lyrics lookups begin when you choose a fetch or identification action. Embedded tags and your audio files are not rewritten by a metadata lookup.
 
 ## Your files
 
